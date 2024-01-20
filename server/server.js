@@ -1,10 +1,11 @@
 const express = require('express');
 const path = require('path');
 
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-// Adjust the path to serve static files from the 'client/dist' directory
+// Serve static files from the React app
 app.use(express.static(path.join(__dirname, '..', 'client', 'dist')));
 
 app.use(express.urlencoded({ extended: true }));
